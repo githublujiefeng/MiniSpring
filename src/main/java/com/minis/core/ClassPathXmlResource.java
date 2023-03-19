@@ -1,6 +1,6 @@
-package com.minis.beans.factory.xml;
+package com.minis.core;
 
-import com.minis.beans.factory.Resource;
+import com.minis.core.Resource;
 import org.dom4j.Document;
 import org.dom4j.Element;
 import org.dom4j.io.SAXReader;

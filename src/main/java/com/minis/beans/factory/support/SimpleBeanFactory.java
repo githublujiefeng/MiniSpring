@@ -1,21 +1,13 @@
-package com.minis.beans.factory;
+package com.minis.beans.factory.support;
 
-import com.minis.beans.BeanDefinition;
-import com.minis.beans.BeansException;
-import com.minis.beans.factory.support.DefaultSingletonBeanRegistry;
+//public class SimpleBeanFactory implements BeanFactory {
+public class SimpleBeanFactory  {
+/*    private List<BeanDefinition> beanDefinitions = new ArrayList<BeanDefinition>();
+    private List<String> beanNames = new ArrayList<String>();
+    private Map<String, Object> singletons = new HashMap<String, Object>();
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.concurrent.ConcurrentHashMap;
-
-public class SimpleSingletonBeanFactory extends DefaultSingletonBeanRegistry implements BeanFactory{
-    private Map<String, BeanDefinition> beanDefinitions = new ConcurrentHashMap<String, BeanDefinition>();
-
-    public SimpleSingletonBeanFactory() {
+    public SimpleBeanFactory() {
     }
-
 
     //容器核心方法
     public Object getBean(String beanName) throws BeansException {
@@ -40,16 +32,17 @@ public class SimpleSingletonBeanFactory extends DefaultSingletonBeanRegistry imp
         }
         return singleton;
     }
-    public void registerBeanDefinition(BeanDefinition beanDefinition){
-        this.beanDefinitions.put(beanDefinition.getId(),beanDefinition);
-    }
 
     public Boolean containsBean(String name) {
-        return containsSingleton(name);
+        return singletons.containsKey(name);
     }
 
     public void registerBean(String beanName, Object obj) {
-        this.registerSingleton(beanName, obj);
+
     }
 
+    public void registerBeanDefinition(BeanDefinition beanDefinition) {
+        this.beanDefinitions.add(beanDefinition);
+        this.beanNames.add(beanDefinition.getId());
+    }*/
 }
